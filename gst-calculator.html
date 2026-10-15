@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GST Calculator Australia — Add or Remove 10% GST | Sole Trader Kit AU</title><meta name="description" content="Free Australian GST calculator. Add 10% GST to a price or work out the GST included in a GST-inclusive amount (one-eleventh)."><link rel="canonical" href="https://christransformers.github.io/soletrader-kit-au/gst-calculator.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Sole Trader Kit AU"><meta property="og:title" content="GST Calculator Australia — Add or Remove 10% GST | Sole Trader Kit AU"><meta property="og:description" content="Free Australian GST calculator. Add 10% GST to a price or work out the GST included in a GST-inclusive amount (one-eleventh)."><meta property="og:url" content="https://christransformers.github.io/soletrader-kit-au/gst-calculator.html"><meta property="og:image" content="https://christransformers.github.io/soletrader-kit-au/assets/og.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/style.css">
+
+<script src="assets/config.js"></script><script src="assets/site.js"></script>
+</head><body>
+<header class="site"><div class="wrap"><a class="logo" href="index.html">Sole Trader Kit <span>AU</span></a>
+<nav><a href="invoice.html">Invoice generator</a><a href="gst-calculator.html">GST calculator</a><a href="abn-checker.html">ABN checker</a><a href="invoice-template/">Templates</a></nav></div></header>
+<main class="wrap"><section class="hero"><h1>GST calculator (Australia)</h1><p>Australian GST is 10%. To find the GST inside a GST-inclusive price, divide by 11.</p></section>
+<div class="card" style="max-width:560px"><label for="amt">Amount (A$)</label><input id="amt" type="number" step="0.01" value="100" inputmode="decimal">
+<label for="mode">Calculation</label><select id="mode"><option value="add">Add GST (amount is ex-GST)</option><option value="remove">Remove GST (amount includes GST)</option></select>
+<div class="result" id="out"></div></div>
+<script>
+function f(n){return n.toLocaleString('en-AU',{style:'currency',currency:'AUD'})}
+function calc(){var a=parseFloat(amt.value)||0,ex,g,inc;if(mode.value==='add'){ex=a;g=a*0.1;inc=a+g}else{inc=a;g=a/11;ex=a-g}
+out.innerHTML='Ex-GST: <b>'+f(ex)+'</b><br>GST: <b>'+f(g)+'</b><br><span class="big">Total incl. GST: '+f(inc)+'</span>'}
+amt.oninput=mode.onchange=calc;calc();
+</script>
+<p class="muted">Rounding: totals are shown to the cent. Check the ATO's rounding rules for invoices with many lines.</p>
+</main>
+<footer><div class="wrap"><p><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="disclaimer.html">Disclaimer</a><span data-contact></span></p>
+<p>General information only — not tax, legal or financial advice. Based on public ATO and business.gov.au guidance. Everything you type stays in your browser. © <span id="year"></span> Sole Trader Kit AU</p></div></footer>
+</body></html>

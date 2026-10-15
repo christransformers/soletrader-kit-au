@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ABN Checker — Validate an Australian Business Number Format | Sole Trader Kit AU</title><meta name="description" content="Free ABN format and checksum validator. Check an 11-digit Australian Business Number is structurally valid before using it on an invoice."><link rel="canonical" href="https://christransformers.github.io/soletrader-kit-au/abn-checker.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Sole Trader Kit AU"><meta property="og:title" content="ABN Checker — Validate an Australian Business Number Format | Sole Trader Kit AU"><meta property="og:description" content="Free ABN format and checksum validator. Check an 11-digit Australian Business Number is structurally valid before using it on an invoice."><meta property="og:url" content="https://christransformers.github.io/soletrader-kit-au/abn-checker.html"><meta property="og:image" content="https://christransformers.github.io/soletrader-kit-au/assets/og.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/style.css">
+
+<script src="assets/config.js"></script><script src="assets/site.js"></script>
+</head><body>
+<header class="site"><div class="wrap"><a class="logo" href="index.html">Sole Trader Kit <span>AU</span></a>
+<nav><a href="invoice.html">Invoice generator</a><a href="gst-calculator.html">GST calculator</a><a href="abn-checker.html">ABN checker</a><a href="invoice-template/">Templates</a></nav></div></header>
+<main class="wrap"><section class="hero"><h1>ABN format checker</h1><p>Checks the 11-digit ABN checksum published by the Australian Business Register. A valid format does <b>not</b> prove the ABN is active or belongs to who you think — confirm that on <a href="https://abr.business.gov.au/" rel="noopener">ABN Lookup</a>.</p></section>
+<div class="card" style="max-width:560px"><label for="abn">ABN</label><input id="abn" placeholder="e.g. 51 824 753 556" inputmode="numeric"><div class="result" id="res">Enter an ABN.</div>
+<p><a id="lookup" href="https://abr.business.gov.au/" target="_blank" rel="noopener">Look it up on the official ABR →</a></p></div>
+<script src="assets/abn.js"></script>
+<script>abn.oninput=function(){var d=abn.value.replace(/\D/g,'');if(!d){res.textContent='Enter an ABN.';return}
+var ok=validABN(d);res.innerHTML=ok?'✅ <b>Valid format</b> ('+d.replace(/(\d{2})(\d{3})(\d{3})(\d{3})/,'$1 $2 $3 $4')+')':'❌ <b>Not a valid ABN</b> — check for typos (needs 11 digits and a valid checksum).';
+lookup.href='https://abr.business.gov.au/ABN/View?abn='+d}</script>
+</main>
+<footer><div class="wrap"><p><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="disclaimer.html">Disclaimer</a><span data-contact></span></p>
+<p>General information only — not tax, legal or financial advice. Based on public ATO and business.gov.au guidance. Everything you type stays in your browser. © <span id="year"></span> Sole Trader Kit AU</p></div></footer>
+</body></html>
