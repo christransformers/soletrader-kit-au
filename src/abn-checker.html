@@ -1,0 +1,8 @@
+<!--{"title":"ABN Checker — Validate an Australian Business Number Format | Sole Trader Kit AU","desc":"Free ABN format and checksum validator. Check an 11-digit Australian Business Number is structurally valid before using it on an invoice."}-->
+<section class="hero"><h1>ABN format checker</h1><p>Checks the 11-digit ABN checksum published by the Australian Business Register. A valid format does <b>not</b> prove the ABN is active or belongs to who you think — confirm that on <a href="https://abr.business.gov.au/" rel="noopener">ABN Lookup</a>.</p></section>
+<div class="card" style="max-width:560px"><label for="abn">ABN</label><input id="abn" placeholder="e.g. 51 824 753 556" inputmode="numeric"><div class="result" id="res">Enter an ABN.</div>
+<p><a id="lookup" href="https://abr.business.gov.au/" target="_blank" rel="noopener">Look it up on the official ABR →</a></p></div>
+<script src="assets/abn.js"></script>
+<script>abn.oninput=function(){var d=abn.value.replace(/\D/g,'');if(!d){res.textContent='Enter an ABN.';return}
+var ok=validABN(d);res.innerHTML=ok?'✅ <b>Valid format</b> ('+d.replace(/(\d{2})(\d{3})(\d{3})(\d{3})/,'$1 $2 $3 $4')+')':'❌ <b>Not a valid ABN</b> — check for typos (needs 11 digits and a valid checksum).';
+lookup.href='https://abr.business.gov.au/ABN/View?abn='+d}</script>

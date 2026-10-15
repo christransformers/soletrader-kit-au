@@ -1,0 +1,24 @@
+<!--{"title":"Free Tax Invoice Generator Australia (ATO-compliant, PDF) | Sole Trader Kit AU","desc":"Create an ATO-compliant Australian tax invoice with ABN, GST and line items, then save as PDF. Free, no sign-up, nothing uploaded."}-->
+<section class="hero no-print"><h1>Free Australian invoice generator</h1><p>Fill in the form, check the live preview, then <b>Download PDF</b> (uses your browser's "Save as PDF"). Drafts auto-save in this browser only.</p></section>
+<div class="grid no-print" style="grid-template-columns:1fr">
+<div class="card"><div class="row">
+<div><h3>Your business</h3><label>Business / trading name</label><input id="sName" placeholder="Jane Smith Electrical">
+<label>ABN</label><input id="sAbn" placeholder="11 digits"><small id="abnMsg" class="muted"></small>
+<label>Address / contact</label><textarea id="sAddr" placeholder="Street, suburb, state, postcode&#10;email / phone"></textarea>
+<label><input type="checkbox" id="gstReg" checked style="width:auto"> Registered for GST</label>
+<label>Prices entered are</label><select id="priceMode"><option value="ex">Excluding GST (GST added)</option><option value="inc">Including GST</option></select></div>
+<div><h3>Bill to</h3><label>Client name / business</label><input id="bName"><label>Client ABN (optional)</label><input id="bAbn">
+<label>Client address</label><textarea id="bAddr"></textarea>
+<div class="row"><div><label>Invoice #</label><input id="num" value="INV-0001"></div><div><label>Issue date</label><input id="date" type="date"></div></div>
+<label>Due date</label><input id="due" type="date"></div></div>
+<h3>Line items</h3><table id="items"><thead><tr><th>Description</th><th style="width:80px">Qty</th><th style="width:120px">Unit price</th><th style="width:110px">GST</th><th style="width:40px"></th></tr></thead><tbody></tbody></table>
+<p><button class="btn ghost" id="add" type="button">+ Add line</button></p>
+<label>Payment details / notes</label><textarea id="notes" placeholder="BSB 000-000  Acc 00000000  — please use invoice number as reference. Payment due within 14 days."></textarea>
+<div id="warn" class="note" style="margin-top:1rem"></div>
+<p><button class="btn" id="pdf" type="button">Download PDF / Print</button> <button class="btn ghost" id="clear" type="button">Clear saved data</button></p>
+<div class="card pro" data-pro hidden><b>Want branded Word/Google Docs templates, quotes & reminder scripts?</b> <a class="btn" data-pro-link href="#">Pro Pack — <span data-pro-price></span></a></div>
+</div></div>
+<h2 class="no-print">Preview</h2>
+<div id="invoice-preview"></div>
+<script src="assets/abn.js"></script>
+<script src="assets/invoice.js"></script>
