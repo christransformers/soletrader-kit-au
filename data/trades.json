@@ -1,0 +1,22 @@
+[
+ {"slug":"electrician","name":"Electrician","items":[["Call-out fee",1,95],["Labour (hours)",3,110],["Power point supply & install",2,85]],"tip":"List licence number if your state requires it on paperwork, and separate materials from labour so clients can see what they paid for."},
+ {"slug":"plumber","name":"Plumber","items":[["Call-out fee",1,99],["Labour (hours)",2,120],["Hot water system service",1,180]],"tip":"Itemise parts and labour separately and note any warranty period on installed parts."},
+ {"slug":"cleaner","name":"Cleaner","items":[["Standard clean (hours)",3,45],["Oven clean",1,80]],"tip":"For recurring jobs, add the service date range to the description, e.g. 'Weekly clean 1–28 Oct'."},
+ {"slug":"photographer","name":"Photographer","items":[["Half-day shoot",1,650],["Edited images",40,8]],"tip":"State usage/licence terms for the images in your notes so the client knows what they bought."},
+ {"slug":"graphic-designer","name":"Graphic designer","items":[["Logo design package",1,900],["Revisions (hours)",2,90]],"tip":"Reference the quote or proposal number and the deliverables so the invoice matches what was agreed."},
+ {"slug":"web-developer","name":"Web developer","items":[["Website build — milestone 1",1,2500],["Hosting setup",1,150]],"tip":"For milestone billing, name the milestone and the percentage of the project it represents."},
+ {"slug":"personal-trainer","name":"Personal trainer","items":[["PT session (60 min)",8,80]],"tip":"Include the session dates covered so clients can reconcile against their bookings."},
+ {"slug":"tutor","name":"Tutor","items":[["Tutoring session (hours)",4,70]],"tip":"Many tutoring services are not GST-registered — if you're under the threshold, issue a plain 'Invoice', not a 'Tax invoice'."},
+ {"slug":"consultant","name":"Consultant","items":[["Consulting (hours)",10,180],["Workshop facilitation",1,1200]],"tip":"For sales of $1,000 or more the buyer's identity or ABN must appear on a tax invoice."},
+ {"slug":"landscaper","name":"Landscaper","items":[["Labour (hours)",6,75],["Mulch (m³)",3,95],["Green waste removal",1,120]],"tip":"Show materials by unit (m³, tonnes) so quantities are clear."},
+ {"slug":"painter","name":"Painter","items":[["Interior painting (hours)",16,65],["Paint & materials",1,420]],"tip":"Note the rooms/areas painted in the description to avoid disputes."},
+ {"slug":"carpenter","name":"Carpenter","items":[["Labour (hours)",8,85],["Timber & fixings",1,560]],"tip":"Reference your quote number and any approved variations."},
+ {"slug":"hairdresser","name":"Mobile hairdresser","items":[["Cut & style",1,75],["Colour",1,140]],"tip":"For walk-in clients a receipt is usually enough; a tax invoice is needed if the client asks or the sale exceeds $82.50 incl. GST."},
+ {"slug":"copywriter","name":"Copywriter","items":[["Blog article (1,000 words)",4,250],["Website copy page",3,300]],"tip":"State the word counts and revision rounds included."},
+ {"slug":"videographer","name":"Videographer","items":[["Filming day",1,1400],["Editing (hours)",8,95]],"tip":"Specify deliverables (formats, lengths) and licence terms in the notes."},
+ {"slug":"bookkeeper","name":"Bookkeeper","items":[["Monthly bookkeeping",1,450],["BAS preparation",1,250]],"tip":"Name the period covered, e.g. 'September 2026'."},
+ {"slug":"mechanic","name":"Mobile mechanic","items":[["Logbook service",1,260],["Brake pads (front)",1,180]],"tip":"Include the vehicle registration and odometer reading in the description."},
+ {"slug":"dog-groomer","name":"Dog groomer","items":[["Full groom (medium dog)",1,95],["Nail trim",1,20]],"tip":"Add the pet's name to the line description — clients appreciate it and it helps records."},
+ {"slug":"removalist","name":"Removalist","items":[["Truck + 2 movers (hours)",4,160],["Packing materials",1,85]],"tip":"State start/finish times so hourly charges are transparent."},
+ {"slug":"virtual-assistant","name":"Virtual assistant","items":[["Admin support (hours)",20,45]],"tip":"Attach or reference a timesheet for hourly work."}
+]
